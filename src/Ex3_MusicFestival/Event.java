@@ -10,11 +10,15 @@ public abstract class Event {
     private String location;
 
     public Event(String name, String type) {
-        eventID = ++lastEventID;    
+        eventID = ++lastEventID;
         eventName = name;
         eventType = type;
         time = "tbd";
         location = "tbd";
+    }
+
+    public void printMe(){
+        System.out.println("Name:" + eventName + "  Type:" + eventType + "  ID:" + eventID);
     }
 
     public int getEventID() {
