@@ -22,21 +22,21 @@ public class Ex3_Main {
         allEvents.add( new MainStageEvent("Leonard Cohen", "music") );
 
         //Small stage events
-        allEvents.add( new SmallStage("Kendrick Lamar & DJ Mustard", "music", 2) );
+        allEvents.add( new SmallStage("Iain Moyles and Evan", "music", 2) );
         allEvents.add( new SmallStage("Nettspend & Rhonda", "music", 2) );
-        allEvents.add( new SmallStage("Iain, Aidan, Evan, and Iken Moyles", "music", 4) );
+        allEvents.add( new SmallStage("Aidan and Bobby", "music", 4) );
         allEvents.add( new SmallStage("Aaron and Philip", "music", 2) );
-        allEvents.add( new SmallStage("Simon & Garfunkel", "music", 2) );
+        allEvents.add( new SmallStage("Bike-a-Thon", "music", 2) );
 
         //Non music events
         allEvents.add( new NonMusicEvent("Face Painting Booth","Kids activity" ,"Tent 4") );
 
         //Food trucks (non music event)
-        allEvents.add( new FoodTruck("Tacos", "Food Truck", "Plot 1", "Mexican") );
-        allEvents.add( new FoodTruck("Ramen", "Food Truck", "Plot 2", "Japanese") );
-        allEvents.add( new FoodTruck("Gelato", "Food Truck", "Plot 3", "Italian") );
-        allEvents.add( new FoodTruck("Mini Donuts", "Food Truck", "Plot 4", "American") );
-        allEvents.add( new FoodTruck("Poutine", "Food Truck", "Plot 5", "Canadian") );
+        allEvents.add( new FoodTruck("Burgers", "Food Truck", "Plot 1", "Mexican") );
+        allEvents.add( new FoodTruck("Ramen and Udon", "Food Truck", "Plot 2", "Japanese") );
+        allEvents.add( new FoodTruck("Ice cream ", "Food Truck", "Plot 3", "AaronLand") );
+        allEvents.add( new FoodTruck("Donuts", "Food Truck", "Plot 4", "American") );
+        allEvents.add( new FoodTruck("French Fries", "Food Truck", "Plot 5", "Belgium") );
 
 
 //        ( (MainStageEvent)allEvents.get(1) ).addTech("PyroTechnics");
@@ -53,16 +53,16 @@ public class Ex3_Main {
 //        }//end for
 
         while(true){
-            System.out.println("What do you want to do?\n1.Add new event\n2.Search for event\n3.Filter by event type\n4.Print by groups\n5.Add MainStage Tech\n6.exit");
+            System.out.println("1.Add new event\n2.Search for event\n3.Filter by event type\n4.Print by groups\n5.Add MainStage Tech\n6.exit");
             int choice = input.nextInt();
             input.nextLine();
 
             if (choice == 1) {
                 //add event
-                System.out.println("What event do you want to add? (Main stage, Small stage, Non Music)");
+                System.out.println("What event do you want? (Main stage, Small stage, Non Music)");
                 String tempEvent = input.nextLine();
 
-                System.out.println("What type of event is it?");
+                System.out.println("What type of event?");
                 String tempType = input.nextLine();
 
                 System.out.println("What is the name of the event?");
@@ -83,7 +83,7 @@ public class Ex3_Main {
                     String tempLoc = input.nextLine();
 
                     if(tempType.equalsIgnoreCase("Food Truck")){
-                        System.out.println("What cuisine does the food truck sell?");
+                        System.out.println("What food does the  truck sell?");
                         String tempCuis = input.nextLine();
                         allEvents.add( new FoodTruck(tempName, tempType, tempLoc, tempCuis) );
                     }else{
@@ -180,13 +180,6 @@ public class Ex3_Main {
                 break;
             }
 
-
-
         }//while loop
-
-
     }//run
-
-
-
 }//class
