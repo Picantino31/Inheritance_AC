@@ -16,6 +16,16 @@ public class As1_Bingo {
         BingoNumbers[3] = generateArray(5, 46, 60);
         BingoNumbers[4] = generateArray(5, 61, 75);
 
+
+        for (int i = 0; i < 5; i++) {
+            System.out.print(allLetters[i] + " ");
+            for (int j = 0; j < 5; j++) {
+                System.out.print(BingoNumbers[i][j] + " ");
+
+            }
+            System.out.println();
+        }
+
         while (true) {
 
 
@@ -30,6 +40,7 @@ public class As1_Bingo {
                     if (num == BingoNumbers[i][j]) {
                         BingoNumbers[i][j] *= -1;
                     }
+
 
                     System.out.print(BingoNumbers[i][j] + " ");
 
